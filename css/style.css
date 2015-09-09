@@ -1,5 +1,39 @@
+ul{
+	list-style: none;
+	width:600px;
+	margin:0 auto;
+	box-sizing:border-box;
+}
 li{
-	height: 20px;
+	height: 60px;
 	width: 500px;
 	border:1px solid black;
+	text-align: center;
+	line-height: 60px;
+	font-size: 30px;
+	font-weight: 700px;
+	box-sizing:border-box;
+	background-color: #efefef;
+	transition: all 0.8s;
 }
+li:nth-of-type(1){
+	background-color: gray;
+}
+li:hover{
+	background-color: #dedede;
+}
+
+.closed{
+	background-color: red;
+	height: 0px;
+	overflow: hidden;
+	border:none;
+}
+.open{
+	background-color: red;
+	height: 80px;
+	overflow: hidden;
+	border:2px solid black;
+	#b6b6b6
+}
+
