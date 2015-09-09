@@ -3,7 +3,7 @@ var game_list = game_ul.children;
 var add_submit = document.getElementById('add_submit_button');
 
 function add_game(name_value){
-	alert(typeof(name_value));
+	
    var new_game = name_value;
    if (new_game===''|| new_game===null){
    	return ;
@@ -12,7 +12,7 @@ function add_game(name_value){
    new_li.innerText = name_value; 
 	game_ul.appendChild(new_li);
 	new_li.innerText = name_value; 
-	alert(new_game);
+	
 
 };
 
