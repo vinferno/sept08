@@ -1,15 +1,18 @@
 var game_ul=document.getElementById('game_ul');
-
 var game_list = game_ul.children;
+var add_submit = document.getElementById('add_submit_button');
 
-function add_game(){
-   var new_game = prompt('What new game do you want to add?'); 
+function add_game(name_value){
+	alert(typeof(name_value));
+   var new_game = name_value;
    if (new_game===''|| new_game===null){
    	return ;
    }
    var new_li = document.createElement('li');
-   new_li.innerText = new_game; 
+   new_li.innerText = name_value; 
 	game_ul.appendChild(new_li);
+	new_li.innerText = name_value; 
+	alert(new_game);
 
 };
 
@@ -38,3 +41,9 @@ game_list[0].addEventListener('click',function(){
 	//add_game();
 });
 
+add_submit.addEventListener('click',function(){
+	var name_value = document.getElementById("name_input_box").value;
+	add_game(name_value);
+	game_list[1].classList.toggle("closed");
+	game_list[1].classList.toggle("open");
+});
