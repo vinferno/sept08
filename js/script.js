@@ -13,21 +13,28 @@ function add_game(){
 
 };
 
-    function getEventTarget(e) {
-        e = e || window.event;
-        return e.target || e.srcElement; 
-    }
+function get_event_target(event_name) {
+    event_name = event_name || window.event;
+    return event_name.target || event_name.srcElement; 
+};
 
-    
-    game_ul.onclick = function(event) {
-        var target = getEventTarget(event);
-        target.style.backgroundColor = "green";
-        alert(target.parentNode)
-    };
+function get_index(target){
+	target_parent= target.parentElement;
+	for (i=0;i<target_parent.children.length;i++){
+		if (target_parent.children[i] === target){
+			
+		};
+	};
+};
 
-
+game_ul.onclick = function(event) {
+    var target = get_event_target(event);
+    get_index(target);      
+};
 
 game_list[0].addEventListener('click',function(){
-	add_game();
+	game_list[1].classList.toggle("closed");
+	game_list[1].classList.toggle("open");
+	//add_game();
 });
 
