@@ -46,4 +46,6 @@ add_submit.addEventListener('click',function(){
 	add_game(name_value);
 	game_list[1].classList.toggle("closed");
 	game_list[1].classList.toggle("open");
+	document.getElementById("name_input_box").value='';
+
 });
